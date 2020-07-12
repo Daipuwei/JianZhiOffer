@@ -1,0 +1,28 @@
+# Project: JZ10-æÿ’Û∏≤∏«
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = JZ10.o
+LINKOBJ  = JZ10.o
+LIBS     = -L"F:/Program Files/Dev-Cpp/MinGW64/lib" -L"F:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"F:/Program Files/Dev-Cpp/MinGW64/include" -I"F:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"F:/Program Files/Dev-Cpp/MinGW64/include" -I"F:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = JZ10-æÿ’Û∏≤∏«.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+JZ10.o: JZ10.cpp
+	$(CPP) -c JZ10.cpp -o JZ10.o $(CXXFLAGS)
