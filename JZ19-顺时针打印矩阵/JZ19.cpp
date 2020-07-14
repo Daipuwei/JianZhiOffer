@@ -47,3 +47,24 @@ class Solution {
 			return result; 
 	    }
 };
+
+int main(){
+	int n;
+	while(cin>>n){
+		vector<vector<int> > matrix;
+		for(int i = 0; i < n ; i++){
+			vector<int> array(n);
+			for(int j = 0 ; j < n ; j++){
+				cin>>array[j];
+			}
+			matrix.push_back(array);
+		}
+		Solution s;
+		vector<int> array = s.printMatrix(matrix);
+		for(int i = 0 ; i < array.size() ; i++){
+			cout<<array[i]<<" ";
+		}	
+	} 
+	
+	return 0;
+}
