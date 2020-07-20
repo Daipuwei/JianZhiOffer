@@ -1,0 +1,28 @@
+# Project: JZ36-两个链表的第一个公共结点
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = JZ36.o
+LINKOBJ  = JZ36.o
+LIBS     = -L"F:/Program Files/Dev-Cpp/MinGW64/lib" -L"F:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"F:/Program Files/Dev-Cpp/MinGW64/include" -I"F:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"F:/Program Files/Dev-Cpp/MinGW64/include" -I"F:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = JZ36-两个链表的第一个公共结点.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+JZ36.o: JZ36.cpp
+	$(CPP) -c JZ36.cpp -o JZ36.o $(CXXFLAGS)
