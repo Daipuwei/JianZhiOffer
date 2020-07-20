@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = JZ38.o
-LINKOBJ  = JZ38.o
+OBJ      = JZ38-1.o
+LINKOBJ  = JZ38-1.o
 LIBS     = -L"F:/Program Files/Dev-Cpp/MinGW64/lib" -L"F:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"F:/Program Files/Dev-Cpp/MinGW64/include" -I"F:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"F:/Program Files/Dev-Cpp/MinGW64/include" -I"F:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-JZ38.o: JZ38.cpp
-	$(CPP) -c JZ38.cpp -o JZ38.o $(CXXFLAGS)
+JZ38-1.o: JZ38-1.cpp
+	$(CPP) -c JZ38-1.cpp -o JZ38-1.o $(CXXFLAGS)
